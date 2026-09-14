@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>0914HTML標籤(二)</title>
+
+
+</head>
+<body>
+
+
+<P>段落文字-文字預設大小,文件<a id="top">最上面</a></P>
+<h1>標題一</h1>
+<h2>標題二</h2>
+<h3>標題三</h3>
+<h4>標題四</h4>
+<h5>標題五</5>
+<h6>標題六</h6>
+<h7>標題七(沒有這東西)</h7>
+<hr><!--水平線-->
+<img src="pic/images.png"width="200px" >img src:檔名/路徑/網址
+<hr><!--水平線-->
+<a href="10818.html">內部超連結-內部網址</a>,<br>
+<a href="https://www.google.com/"   target="_blank">外部超連結-外部網址</a><br>
+<hr>
+<div>區塊(biock)元素的容器,單獨成行</div>
+<span>行內元素的容器,和別人成行</span>
+<hr>
+
+
+
+
+
+
+
+
+<p>文件最下面</p>
+<p>回到<a href="#top">最上面</a></p>
+
+
+
+</body>
+
+</html>
+
+
