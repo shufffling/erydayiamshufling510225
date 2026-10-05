@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>1005-CSS容器設定</title>
+<style>
+/* 容器 box
+box-sizing:預設是4centent-box也可以改成border-box;
+
+由內而外是 content內容(寬高) padding填充 border框線 margin邊界
+除了內容 分別可以設定 上top 右right 下bottom 左left
+框線再分 粗細(width) 樣式(sytle) 顏色(color)
+  border-style: solid/框線樣式常見有四種: solid實線 datted虛線 dotted點點 double雙線 ;*/
+
+#d1{
+    width:100px;
+    height:100px;
+    background-color: lightgray;
+    border:5px solid black;
+    /*border-color: red yellow green blue;
+   border-width: 10px ;
+  border-style: solid/datted/dotted/double ;
+  
+  borber-radius(圓角矩形的半徑) 透明色:transperents
+  */
+padding: 10px 50px ;
+margin-bottom: 10px ;
+
+}
+#d2{
+border: 1px solid black;
+height:200px;
+width:400px;
+margin: 20px;
+border-radius: 100px ;/*絕對單位*/
+}
+#d3{
+border: 1px solid black;
+height:100px;
+width:200px;
+margin: 30px;
+border-radius: 50%;/*相對單位*/
+}
+#d4{
+border: 50px solid black;
+height:0px;
+width:100px;
+margin: 30px;
+border-color: red yellow green blue;
+border-width: 0px 10px 30px ;
+}
+#diamond1{
+    width:50px;
+    height:0px;
+    border-style: 30px solid black;
+    border-bottom-color:lightblue; 
+    border-top-width: 0px;
+}
+#diamond2{
+    width:0px;
+    height:0px;
+    border: 55px;
+    border-style: 30px solid black;
+    border-bottom-color:lightblue; 
+    border-top-width: 0px 20px 20px;
+}
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+<div id="d1">666</div>
+<div id="d2"></div>
+<div id="d3"></div>
+<div id="d4"></div>
+
+<hr>
+<div id="diamond1"></div>
+<div id="diamond2"></div>
+<hr>
+自訂創意 homework
+</body>
+</html>
