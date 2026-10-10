@@ -1,0 +1,149 @@
+<html>
+<head>
+<title>1005-CSS容器設定</title>
+<style>
+/* 容器 box
+box-sizing:預設是4centent-box也可以改成border-box;
+
+由內而外是 content內容(寬高) padding填充 border框線 margin邊界
+除了內容 分別可以設定 上top 右right 下bottom 左left
+框線再分 粗細(width) 樣式(sytle) 顏色(color)
+  border-style: solid/框線樣式常見有四種: solid實線 datted虛線 dotted點點 double雙線 ;*/
+
+#d1{
+    width:100px;
+    height:100px;
+    background-color: lightgray;
+    border:5px solid black;
+    /*border-color: red yellow green blue;
+   border-width: 10px ;
+  border-style: solid/datted/dotted/double ;
+  
+  borber-radius(圓角矩形的半徑) 透明色:transperents
+  */
+padding: 10px 50px ;
+margin-bottom: 10px ;
+
+}
+#d2{
+border: 1px solid black;
+height:200px;
+width:400px;
+margin: 20px;
+border-radius: 100px ;/*絕對單位*/
+}
+#d3{
+border: 1px solid black;
+height:100px;
+width:200px;
+margin: 30px;
+border-radius: 50%;/*相對單位*/
+}
+#d4{
+border: 50px solid black;
+height:0px;
+width:100px;
+margin: 30px;
+border-color: red yellow green blue;
+border-width: 0px 10px 30px ;
+}
+
+#diamond1{
+  height:0px;
+  width:50px;
+    border-left:25px solid transparent;
+border-right:25px solid transparent;
+    border-bottom:30px solid deepskyblue;
+}
+
+#diamond2{
+   height:0px;
+   width:0px;
+    border-left:50px solid transparent;
+    border-right:50px solid transparent;
+    border-top:50px solid deepskyblue;
+}
+
+#tree1{
+  height:0px;
+  width:0px;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 80px solid green;
+  margin: 0 auto 2px;
+}
+
+#tree2{
+  width: 0px;
+  height: 0px;
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 60px solid green;
+  margin: 0 auto 2px;
+}
+#tree3{
+  width: 0px;
+  height: 0px;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 60px solid green;
+  margin: 0 auto;
+}
+#tree4{
+  width: 30px;
+  height: 100px;
+  background-color: brown;
+  margin: 0 auto;
+}
+#snowman{
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  border-radius:100px;
+  margin: 25px auto 0;
+  text-align: center;
+}
+#snowman .eye{
+  font-size: 12px;
+  margin: 0 8px;
+}
+#snowman1{
+  border: 1px solid black;
+  width: 150px;
+  height: 150px;
+  border-radius:100px;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+<div id="d1">666</div>
+<div id="d2"></div>
+<div id="d3"></div>
+<div id="d4"></div>
+
+<hr>
+<div id="diamond"></div>
+    <div id="diamond1"></div>
+    <div id="diamond2"></div>
+<hr>
+
+<div id="tree"></div>
+<div id="tree1"></div>
+<div id="tree2"></div>
+<div id="tree3"></div>
+<div id="tree4"></div>
+
+<hr>
+<div id="snowman"><br><br><span class="eye">●</span><span class="eye">●</span></div>
+<div id="snowman1"></div>
+<div id="snowman2"></div>
+</body>
+</html>
