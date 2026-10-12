@@ -1,0 +1,117 @@
+<html>
+<head>
+    <title>1012-CSS漸層與動畫</title>
+<style>
+div{
+width: 200px;
+height: 200px;
+margin-bottom: 10px;
+display:inline-block
+}
+#d1{
+background-image: linear-gradient(red,yellow);/*線性漸層*/
+}
+#d2{/*方向0~360deg,多顏色逗號隔開*/
+background-image: linear-gradient(90deg,red,orange,yellow,green,blue,indigo,violet);
+width: 400px;
+height: 50px;
+}
+#d3{/*輻射漸層*/
+background-image:radial-gradient(red,orange,yellow,green,blue,indigo,violet );
+}
+#d4{/*預設會隨容器改變形狀,第一參數設定circle可強制為圓形*/
+background-image:radial-gradient(circle,yellow,white,black) ;
+}
+#d5{/*圓錐漸層*/
+    background-image: conic-gradient(red,blue,indigo,violet,red);
+}
+#d6{/*第一參數可調整起始位置*/
+    background-image: conic-gradient(from 90deg,red,green,blue,red);
+}
+#d7{
+    background-image:linear-gradient(90deg,red 33%,white 33%,white 66%,blue 66%);
+}
+#d8{
+    background-image:repeating-linear-gradient(90deg,black 30%,white 35%,black 40%);
+}
+#d9{
+    background-image:conic-gradient(red 33%,white 66%,blue 66%);
+ 
+}
+#d10{
+    background-image:repeating-linear-gradient(125deg,red,white,blue);
+}
+#d11{
+    background-image:repeating-radial-gradient(circle,red 33%,white 33%,red 40%);
+}
+#d12{
+    background-image:repeating-conic-gradient(red 30%,white 35%,red 40%);
+}
+/*動畫*/
+@keyframes k1{
+    0%{background-image: linear-gradient(red,white 50%,blue);}
+    10%{background-image: linear-gradient(red,white 40%,blue);}
+    20%{background-image: linear-gradient(red,white 30%,blue);}
+    40%{background-image: linear-gradient(red,white 20%,blue)}
+    60%{background-image: linear-gradient(red,white 40%,blue)};
+    80%{background-image: linear-gradient(red,white 50%,blue);}
+    100%{background-image: linear-gradient(red,white 70%,blue);}
+}
+#a1{/*動畫名稱 播一組多久 播幾次 線性速度*/
+    animation: k1 1s infinite linear;
+}
+@keyframes k2{
+
+}
+#a2{
+    animation: k2 1s infinite linear;
+}
+@keyframes k3{
+0%{background-image:radial-gradient(circle,yellow,white 50%,black)} ;
+15%{background-image:radial-gradient(circle,yellow,white 40%,black)} ;
+30%{background-image:radial-gradient(circle,yellow,white 50%,black)} ;
+45%{background-image:radial-gradient(circle,yellow,white 50%,black)} ;
+60%{background-image:radial-gradient(circle,yellow,white 50%,black)} ;
+75%{background-image:radial-gradient(circle,yellow,white 50%,black)} ;
+100%{background-image:radial-gradient(circle,yellow,white 50%,black)} ;
+}
+#a3{
+    animation: k2 0.5s infinite linear;/*paused動畫停止 running正常運行*/
+}
+
+
+
+</style>
+</head>
+<body>
+<div id="d1"></div>
+<div id="d2"></div>
+<div id="d3"></div>
+<div id="d4"></div>
+<div id="d5"></div>
+<div id="d6"></div>
+<hr>
+<div id="d7"></div>
+<div id="d8"></div>
+<div id="d9"></div>
+<div id="d10"></div>
+<div id="d11"></div>
+<div id="d12"></div>
+<hr>
+<div id="a1"></div>
+<div id="a2"></div>
+<div id="a3"></div>
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+</html>
