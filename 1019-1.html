@@ -1,0 +1,83 @@
+<DOCTYPE html>
+<head>
+<title>1019-位置與圖層</title>
+<style>
+    /*
+    position:relative 是相對於自己原本的座標
+    position:absolute 是相對於(有設定position的父容器,或 body)的絕對座標
+       可設定 top/left 或bottom/right
+    z-index 為圖層,數字大的在上;數字一樣則是後生成的元素在上
+    */
+#dad{
+    border:2px solid black;
+    width:600px;
+    height:600px;
+    position:relative;
+    top:20px;
+    left:20px;
+}
+#d1{
+    border:2px solid red;
+    width:100px;
+    height:100px;
+    background-color: hsla(0deg,100%,50%,1 );
+    z-index: 100;
+    position:relative;/*單純為了圖層效果,兩個都行*/
+}
+#d2{
+    border:2px solid blue;
+    width:100px;
+    height:100px;
+    position:relative;
+    top:30px;
+    left:30px;    
+}
+#d3{
+    border:2px solid green;
+    width:100px;
+    height:100px;
+    position:absolute;
+    top:10px;
+    left:10px; 
+    background-color: hsla(120deg,100%,50%,0.85);   
+    z-index: 100;    
+}
+#d4{
+    background-color: hsla(60deg,100%,50%,0.85);   
+    width:100px;
+    height:100px;
+    position:absolute;
+    bottom:10px;
+    right:10px;        
+}
+#uncle{
+    border:2px dashed black;
+    width:100px;
+    height:100px;
+    position:absolute;
+    top:10px;
+    left:10px;        
+}
+
+
+
+
+
+
+
+
+
+</style>
+
+</head>
+<body>
+<div id="dad">
+<div id="d1"></div>
+<div id="d2"></div>
+<div id="d3"></div>
+<div id="d4"></div>
+</div>
+<div id="uncle"></div>
+
+</body>
+</html>
