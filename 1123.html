@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>1123元素生成與消失</title>
+   <meta charset="UTF-8">
+   <style>
+     #board{
+        width: 600px;
+        height: 600px;
+        border: solid 1px black;
+        position: relative;
+        margin:2px 0px;
+     }
+     .target{
+        border-radius: 50%;
+        position: absolute;
+     }
+     .timebar{
+        width: 602px;
+        height: 20px;
+        background-color: green;
+     }
+   </style>
+   <script>
+    var game
+      function getElm(id){
+        return document.getElementById(id);
+      }
+      function getRandom(min,max){
+        return Math.floor(Math.random()*(max-min+1))+min;
+      }
+      function getGB(){
+        var r=getRandom(50,250);
+        var g=getRandom(50,250);
+        var b=getRandom(50,250);
+        return`rgb(${r},${g},${b})`;
+      }
+      function newTarget(){
+        var t=document.createElement("div");
+        t.className="target";
+        t.w=getRandom(20,60);
+        t.h=t.w;
+        t.x=getRandom(0, board.w - t.w);
+        t.y=getRandom(0, board.h - t.h);
+        t.style.width=`${t.w}px`;
+        t.style.height=`${t.h}px`;
+        t.style.left=`${t.x}px`;
+        t.style.top=`${t.y}px`;
+        t.style.backgroundColor=getGB();
+        getElm("board").appendChild(t);
+      }
+      function game_init(){
+        border={w:600,h:600};
+        game_score=0;
+      }
+      function game_start(){
+        game_init();
+        setInterval(()=>{
+            game_time_ms-=100;
+            getElm("timebar").style.width=`${game_time_ms/100}px`;
+        })
+        game.target_timer=setInterval(newTarget,1000);
+      }
+      function game_stop(){
+        clearInterval(target_timer);
+        clearInterval(game_timer);
+      }
+   </script>
+</head>
+<body>
+   <div id="timebar"></div>    
+   <div id="board">
+     <div class="target" onclick></div>
+</div>
+<button onclick="game_start();">遊戲開始</button>
+<button onclick="game_stop();">遊戲結束</button>
+</body>
+</html>
